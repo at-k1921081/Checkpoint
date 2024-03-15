@@ -1,4 +1,4 @@
-export const goals = [
+export const INITIAL_GOALS = [
     {
         title: "Complete the ListScreen",
         description: "Create the ListScreen screen for the Mobile Application Development assignment Major Mobile Application",
