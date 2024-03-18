@@ -6,7 +6,8 @@ const defaultGoal = {
     title: null,
     description: null,
     progress: null,
-    goal: null
+    goal: null,
+    index: null
 };
 
 export default function GoalForm({originalGoal, onSubmit, onCancel}) {

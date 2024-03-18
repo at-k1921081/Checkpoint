@@ -7,22 +7,25 @@ import GoalsList from "../components/GoalsList";
 export default function ListScreen({navigation}) {
     const [goals, setGoals] = useState(INITIAL_GOALS); // The goals the app is working with
     
-    const handleEdit = (updatedGoal) => setGoals(goals.map((goal) => (goal.title == updatedGoal.title ? updatedGoal : goal)));
+    const handleEdit = (updatedGoal) => setGoals(goals.map((goal) => (goal.index === updatedGoal.index ? updatedGoal : goal)));
 
     const onEdit = (goal) => {
         handleEdit(goal);
+        console.log("title: " + goal.title);
+        console.log("description: " + goal.description);
+        console.log("progress: " + goal.progress);
+        console.log("goal: " + goal.goal);
         navigation.navigate("ListScreen");
     }
 
-    const OnGoalClick = (goal) => {
-        navigation.navigate("EditScreen", { goal, onEdit });
-    };
+    const gotoAddScreen = () => navigation.navigate("AddScreen");
+    const gotoEditScreen = (goal) => navigation.navigate("EditScreen", { goal, onEdit });
 
     return (
         <View>
-            <GoalsList goals={goals} onGoalClick={OnGoalClick}/>
-            <Button label="Add Goal" onclick={() => { navigation.navigate("AddScreen"); }}/>
-            <Button label="Edit Goal" onclick={(goal) => { navigation.navigate("EditScreen", { goal, onEdit }); }}/>
+            <GoalsList goals={goals} onGoalClick={gotoEditScreen}/>
+            <Button label="Add Goal" onclick={gotoAddScreen}/>
+            <Button label="Edit Goal" onclick={gotoEditScreen}/>
             <Button label="Delete Goal" onclick={(goal) => { setGoals(goals.map((currentgoal) => { return goal.title !== currentgoal.title; })); }}/>
         </View>
     );

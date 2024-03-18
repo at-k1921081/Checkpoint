@@ -1,12 +1,12 @@
-import { View } from "react-native";
-import Button from "./Button";
+import { ScrollView } from "react-native";
+import GoalItem from "./GoalItem";
 
 export default function GoalsList({goals, onGoalClick}) {
     return (
-        <View>
+        <ScrollView>
             {
-                goals.map((goal) => { return <Button label={goal.title} onclick={ () => onGoalClick(goal) } key={goal.title}/> })
+                goals.map((goal) => { return (<GoalItem goal={goal} onSelect={onGoalClick} key={goal.index}/>); })
             }
-        </View>
+        </ScrollView>
     );
 }
