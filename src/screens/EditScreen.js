@@ -1,14 +1,12 @@
-import { View, Text } from "react-native";
-import { useState } from "react";
+import { View } from "react-native";
+import GoalForm from "../components/GoalForm";
 
 export default function EditScreen({navigation, route}) {
-    const { goal } = route.params;
+    const { goal, onEdit } = route.params;
 
     return (
         <View>
-            <Text>This is the edit screen</Text>
-            <Text>Title: {goal.title}<br/>Description:<br/>{goal.description}<br/>
-                Progress: {goal.progress}<br/>Goal: {goal.goal}</Text>
+            <GoalForm originalGoal={goal} onSubmit={onEdit} onCancel={navigation.goBack}/>
         </View>
     );
 }
