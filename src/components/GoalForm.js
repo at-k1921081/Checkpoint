@@ -13,7 +13,7 @@ const defaultGoal = {
 export default function GoalForm({originalGoal, onSubmit, onCancel}) {
     const [goal, setGoal] = useState(originalGoal || defaultGoal);
 
-    const handleChange = (field, value) => setGoal({...module, [field]: value});
+    const handleChange = (field, value) => setGoal({...goal, [field]: value});
     const handleSubmit = () => onSubmit(goal);
 
     const submitLabel = originalGoal ? "Modify" : "Add";
