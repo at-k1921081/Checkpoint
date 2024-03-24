@@ -1,9 +1,12 @@
 import { View, Text } from "react-native";
+import GoalForm from "../components/GoalForm";
 
-export default function AddScreen() {
+export default function AddScreen({navigation, route}) {
+    const { onAdd } = route.params;
+
     return (
         <View>
-            <Text>This is the add screen</Text>
+            <GoalForm originalGoal={null} onSubmit={onAdd} onCancel={navigation.goBack}/>
         </View>
     );
 }
