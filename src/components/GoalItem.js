@@ -1,8 +1,9 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-export default function GoalItem({goal, onSelect}) {
+export default function GoalItem({goal, onSelect, selectedIndex, setSelectedIndex}) {
     return (
-        <Pressable onPress={() => onSelect(goal)} style={styles.item}>
+        <Pressable onPress={() => { onSelect(goal); setSelectedIndex(goal.index); }}
+            style={selectedIndex == goal.index ? styles.selectedItem : styles.item}>
             <View>
                 <Text>{goal.title}</Text>
             </View>
@@ -15,5 +16,10 @@ const styles = StyleSheet.create({
         border: "1px solid grey",
         padding: 5,
         backgroundColor: "white"
+    },
+    selectedItem: {
+        border: "1px solid grey",
+        padding: 5,
+        backgroundColor: "lightblue"
     }
 });

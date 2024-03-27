@@ -2,10 +2,10 @@ import { StyleSheet, View } from "react-native";
 import GoalsList from "./GoalsList";
 import GoalView from "./GoalView";
 
-export default function GoalsUI({goals, onGoalClick, goal}) {
+export default function GoalsUI({goals, onGoalClick, goal, selectedIndex, setSelectedIndex}) {
     return (
         <View style={styles.ui}>
-            <GoalsList goals={goals} onGoalClick={onGoalClick}/>
+            <GoalsList goals={goals} onGoalClick={onGoalClick} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
             <GoalView selectedGoal={goal}/>
         </View>
     );
