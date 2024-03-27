@@ -25,6 +25,7 @@ export default function GoalForm({originalGoal, onSubmit, onCancel}) {
             <Form.InputText label="Description" value={goal.description} onChange={(value) => handleChange("description", value)}/>
             <Form.InputText label="Progress" value={goal.progress} onChange={(value) => handleChange("progress", value)}/>
             <Form.InputText label="Goal" value={goal.goal} onChange={(value) => handleChange("goal", value)}/>
+            <Form.InputText label="Category" value={goal.category} onChange={(value) => handleChange("category", value)}/>
         </Form>
     );
 }

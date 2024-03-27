@@ -4,6 +4,7 @@ export const INITIAL_GOALS = [
         description: "Create the ListScreen screen for the Mobile Application Development assignment Major Mobile Application",
         progress: 0,
         goal: 1,
+        category: "Mobile Project",
         index: 0
     },
     {
@@ -11,6 +12,7 @@ export const INITIAL_GOALS = [
         description: "Create the AddScreen screen for the Mobile Application Development assignment Major Mobile Application",
         progress: 0,
         goal: 1,
+        category: "Mobile Project",
         index: 1
     },
     {
@@ -18,6 +20,7 @@ export const INITIAL_GOALS = [
         description: "Create the EditScreen screen for the Mobile Application Development assignment Major Mobile Application",
         progress: 0,
         goal: 1,
+        category: "Mobile Project",
         index: 2
     },
     {
@@ -25,6 +28,7 @@ export const INITIAL_GOALS = [
         description: "Create the Checkpoint app for the Major Mobile Application assignment",
         progress: 0,
         goal: 1,
+        category: "School",
         index: 3
     },
     {
@@ -32,6 +36,7 @@ export const INITIAL_GOALS = [
         description: "Complete the progress and planning report for the Mobile Application Development subject for 15th of March.",
         progress: 0,
         goal: 1,
+        category: "School",
         index: 4
     },
 ];
