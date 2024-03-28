@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
     },
     categoryText: {
         color: "dimgrey",
-        fontSize: "12px"
+        fontSize: 12
     }
 });

@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { ScrollView } from "react-native";
 import { Button, ButtonTray } from "../components/Button";
 import { useState } from "react";
 import { INITIAL_GOALS } from "../sample data/InitialGoals";
@@ -35,7 +35,7 @@ export default function ListScreen({navigation}) {
     }
 
     return (
-        <View>
+        <ScrollView>
             <GoalsUI goals={goals} visibleGoals={visibleGoals} setVisibleGoals={setVisibleGoals} onGoalClick={handleSelect} goal={selectedGoal}
                 selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}/>
             <ButtonTray>
@@ -43,6 +43,6 @@ export default function ListScreen({navigation}) {
                 <Button label="Edit Goal" onclick={gotoEditScreen}/>
                 <Button label="Delete Goal" onclick={onDelete}/>
             </ButtonTray>
-        </View>
+        </ScrollView>
     );
 }

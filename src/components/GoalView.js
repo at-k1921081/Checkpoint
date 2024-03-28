@@ -24,12 +24,11 @@ export default function GoalView({selectedGoal}) {
 
 const styles = StyleSheet.create({
     goalView: {
-        marginLeft: "50px",
-        marginRight: "50px",
         justifyContent: "center",
         border: "1px solid black",
         backgroundColor: "white",
-        padding: 15
+        padding: 15,
+        maxWidth: 250
     },
     title: {
         position: "absolute",
