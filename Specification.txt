@@ -1,0 +1,16 @@
+1. Overview
+Checkpoint will be a program that can create, read, update, delete and list goals (CRUDL). Each goal will have a title, description, end goal point and current progress.
+The goal of the program is to create a utility that can help the user organise and track the progress of all their personal goals, all into one simple to use program.
+The goals will be grouped into two types: finished and in progress.
+
+2. Basic tasks
+-Add a screen that can lists all the current goals
+    *There should be a list of goals that shows every goal's title (bonus feature: a category)
+    *There should be a button to add and modify a goal
+    *There should be a button to remove a goal
+    *Add options to show all goals, in progress goals or completed goals. (bonus feature: sort by category)
+-Add a screen that can modify an existing goal
+    *All the properties of the goal (title, description, progress, goal) should be possible to edit
+    *Complete goal and send it to the list of completed goals
+-Add a screen that can add an existing goal
+    *The goal should have the usual properties (title, description, progress, goal) (bonus feature: category)
